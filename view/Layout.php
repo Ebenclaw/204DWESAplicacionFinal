@@ -24,13 +24,16 @@
         <footer>
             <div id="derechos">2023-2024 © Todos los derechos reservados: <a href="../index.html">Rebeca Sánchez Pérez</a></div>
             <div id="fotos">
-                <form method="post" class="formTecnologias">
+<!--                <form method="post" class="formTecnologias">
                     <button type="submit" name="tecnologias" value="tecnologias" class="tecnologias">
                         <img alt="herramientas" src="../webroot/image/GitHub.png" />
                     </button>
-                </form>
+                </form>-->
+                <a href="#" target="_blank"><img id="rss" src="../webroot/image/" alt="rss"></a>
                 <a href="https://github.com/Ebenclaw/204DWESLoginLogoff" target="_blank"><img id="git" src="../webroot/image/GitHub.png" alt="GitHub"></a>
-                <a href="http://ieslossauces.centros.educa.jcyl.es/sitio/" target="_blank"><img id="sauces" src="../webroot/image/sauces.png" alt="Sauces"></a>
+                <a href="#" target="_blank"><img id="doc" src="../webroot/image/" alt="PHPDoc"></a>
+                <a href="#" target="_blank"><img id="curriculum" src="../webroot/image/" alt="curriculum"></a>
+                <a href="https://www.zara.com/es/" target="_blank"><img id="sauces" src="../webroot/image/" alt="WebImitada"></a>
                 <!--<a href="../204DWESProyectoDWES/indexProyectoDWES.php"><img id="home" src="webroot/image/home.png" alt="Inicio"></a>-->
             </div>
         </footer>
