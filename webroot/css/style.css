@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gabarito', cursive;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100%;
+    color: #59483e;
+}
+body{
+    background-image: url(../image/fondo.png);
+    background-attachment: fixed;
+    background-size: 100% 110%;
+}
+/*---ERROR 404---*/
+.error{
+    color: red;
+}
+.imgError{
+    display: block;
+    width: 600px;
+    margin: auto;
+    margin-top: 200px;
+}
+.divError{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F73C90;
+    text-align: center;
+}
+/*---INICIO PUBLICO---*/
+.fotoIdioma{
+    width: 30px;
+    height: 20px;
+}
+.carousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.carousel img{
+    width: 600px;
+}
+/*---TECNOLOGIAS---*/
+.tecnologias .container1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+.tecnologias .container1 div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+}
+.tecnologias .container1 div img{
+    width: 50px;
+    height: 50px;
+}
+/*---FOOTER---*/
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+footer #derechos{
+    width: 75%;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 1rem;
+}
+#derechos a{
+    text-decoration: underline;
+}
+footer #fotos{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+footer * img{
+    width: 40px;
+}
+#sauces{
+    background-color: white;
+    border-radius: 50%;
+}
+#home{
+    width: 35px;
+}
