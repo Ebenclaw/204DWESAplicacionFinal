@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@font-face {
+    font-family: fuenteDeZara;
+    src: url(OPTIBodoni-Antiqua.otf);
+}
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Gabarito', cursive;
+    font-family: "Montserrat", sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 html{
+    padding-left: 180px;
     width: 100%;
     height: 100%;
-    color: #59483e;
+    color: black;
+}
+header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
 }
 body{
-    background-image: url(../image/fondo.png);
+    display: flex;
     background-attachment: fixed;
     background-size: 100% 110%;
+/*    justify-content: space-between;*/
 }
 /*---ERROR 404---*/
 .error{
@@ -33,18 +44,123 @@ body{
     color: #F73C90;
     text-align: center;
 }
-/*---INICIO PUBLICO---*/
-.fotoIdioma{
-    width: 30px;
-    height: 20px;
+header h1{
+    z-index: 1;
+    letter-spacing: -5px;
+    word-spacing: 2rem;
+    font-weight: normal;
+    font-size: 7rem;
+    font-family: fuenteDeZara;
+    margin-bottom: 30px;
+    justify-self: flex-start;
 }
-.carousel{
+h2{
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+/*---INICIO PUBLICO---*/
+.tituloinicioPublico{
+    z-index: 1;
+    padding-right: 40px;
+}
+.inicioPublico{
+    padding-top: 20px;
+    display: flex;
+    z-index: 10;
+    color: black;
+}
+/*---CAROUSEL---*/
+slider {
+    z-index: -1;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    background-size: cover;
+    background-position: center;
+    animation: slider 50s infinite;
 }
-.carousel img{
-    width: 600px;
+
+.slider .slide:nth-child(1) {
+    background-image: url('../image/arbolYDiagrama.png');
+    animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url('../image/userlmn_4422135813c8d4c72c03b206bce57a09.jpg');
+    animation-delay: -10s;
+}
+
+.slider .slide:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -20s;
+}
+
+.slider .slide:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -30s;
+}
+
+.slider .slide:nth-child(5) {
+    background-image: url('../image/userlmn_9bce9203290a75a0df357f5ac314d474.png');
+    animation-delay: -40s;
+}
+
+@keyframes slider {
+    0%, 16%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+    20% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+    96% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+}
+/*---LOGIN---*/
+.login{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.login .container{
+    display: flex;
+    justify-content: space-between;
+}
+.formulacioInicioSesion{
+    width: 500px;
+}
+#formLogin{
+    
+}
+.formulacioInicioSesion h3{
+    font-weight: normal;
+    margin-bottom: 30px; 
+}
+.formulacioInicioSesion table{
+    width: 100%;
+    height: 100%;
+}
+.formulacioInicioSesion table tr{
+    margin-bottom: 30px;
+}
+.formulacioInicioSesion input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid grey;
 }
 /*---TECNOLOGIAS---*/
 .tecnologias .container1{
@@ -81,7 +197,7 @@ footer #derechos{
 footer #fotos{
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 200px;
 }
 footer * img{
     width: 40px;

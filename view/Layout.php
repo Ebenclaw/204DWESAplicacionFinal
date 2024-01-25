@@ -2,7 +2,7 @@
 /*
  * @author Rebeca Sánchez Pérez
  * @version 1.0
- * @since 22/01/2023
+ * @since 22/01/2024
  */
 ?>
 <!DOCTYPE html>
@@ -18,9 +18,9 @@
 
     <body>
         <header>
-            <h1 id="tituloApp">Login Logoff</h1>        
+            <h1 id="tituloApp">APLICACION FINAL</h1>        
             <?php require_once $view[$_SESSION['paginaActiva']]; ?>
-        </main>
+        
         <footer>
             <div id="derechos">2023-2024 © Todos los derechos reservados: <a href="../index.html">Rebeca Sánchez Pérez</a></div>
             <div id="fotos">
@@ -30,10 +30,10 @@
                     </button>
                 </form>-->
                 <a href="#" target="_blank"><img id="rss" src="../webroot/image/" alt="rss"></a>
-                <a href="https://github.com/Ebenclaw/204DWESLoginLogoff" target="_blank"><img id="git" src="../webroot/image/GitHub.png" alt="GitHub"></a>
+                <a href="https://github.com/Ebenclaw/204DWESAplicacionFinal" target="_blank"><img id="git" src="../webroot/image/GitHub.png" alt="GitHub"></a>
                 <a href="#" target="_blank"><img id="doc" src="../webroot/image/" alt="PHPDoc"></a>
                 <a href="#" target="_blank"><img id="curriculum" src="../webroot/image/" alt="curriculum"></a>
-                <a href="https://www.zara.com/es/" target="_blank"><img id="sauces" src="../webroot/image/" alt="WebImitada"></a>
+                <a href="https://www.zara.com/es/" target="_blank"><img id="sauces" src="../webroot/image/zara.jpg" alt="WebImitada"></a>
                 <!--<a href="../204DWESProyectoDWES/indexProyectoDWES.php"><img id="home" src="webroot/image/home.png" alt="Inicio"></a>-->
             </div>
         </footer>
