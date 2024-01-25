@@ -25,7 +25,8 @@ $controller = [
     'miCuenta' => 'controller/cMiCuenta.php',
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
     'wip' => 'controller/cWIP.php',
-    'error' => 'controller/cError.php'
+    'error' => 'controller/cError.php',
+    'rest' => 'controller/cRest.php'
 ];
 
 // El array $view almacena los ficheros de la vista
@@ -41,5 +42,6 @@ $view = [
     'miCuenta' => 'view/vMiCuenta.php',
     'borrarCuenta' => 'view/vBorrarCuenta.php',
     'wip' => 'view/vWIP.php',
-    'error' => 'view/vError.php'
+    'error' => 'view/vError.php',
+    'rest' => 'view/vREST.php'
 ];

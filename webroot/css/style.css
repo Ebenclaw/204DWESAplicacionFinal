@@ -218,10 +218,8 @@ footer #fotos{
     bottom: 0;
     right: 200px;
 }
-footer * img{
-    width: 40px;
-}
-#sauces{
+footer img{
+    height: 40px;
     background-color: white;
     border-radius: 50%;
 }

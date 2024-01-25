@@ -52,6 +52,15 @@ if (isset($_REQUEST['editarPerfil'])) {
     exit();
 }
 
+// Se comprueba que se pulsa el boton Rest
+if (isset($_REQUEST['rest'])) {
+    // Redirige a la página de Mi Cuenta
+    $_SESSION['paginaActiva'] = 'rest';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
 // Define los mensajes según el idioma
 if ($_COOKIE['idioma'] == 'ES') {
     $bienvenida = "Bienvenid@, {$_SESSION['user204DWESLoginLogout']->getdescUsuario()}.<br>";

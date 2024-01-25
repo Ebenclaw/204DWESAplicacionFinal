@@ -2,7 +2,7 @@
 /*
  * @author Rebeca Sánchez Pérez
  * @version 1.0
- * @since 15/01/2023
+ * @since 25/01/2024
  */
 ?>
 <h2>Inicio Privado</h2>
@@ -21,5 +21,6 @@
             <button type="submit" name="mtoDepartamento" class="botonMtoDepartamento">Mantenimiento Departamentos</button>
             <button type="submit" name="detalle" class="botonDetalle">Detalle</button>
             <button type="submit" name="editarPerfil" class="botonEditarPerfil">Editar Perfil</button>
+            <button type="submit" name="rest" class="botonRest">REST</button>
         </form>
     </div>
