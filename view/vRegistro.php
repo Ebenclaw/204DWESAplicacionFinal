@@ -10,7 +10,7 @@
 <main class="registro">
     <div class="container">
         <div class="formulacioRegistro">
-            <h3>Crea tu cuenta:</h3>
+            <h3>DATOS PERSONALES</h3>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formRegistro" method="post">
                 <table>
                     <tr>

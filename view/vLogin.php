@@ -20,10 +20,10 @@
                         <td><input placeholder="CONTRASEÑA" class="obligatorio" type="password" name="password" value="<?php echo (isset($_REQUEST['password']) ? $_REQUEST['password'] : ''); ?>"></td>
                     </tr>
                     <tr>
-                        <td><button type="submit" name="inicioPrivado" class="botonInicioPrivado">Inicio Privado</button></td>
+                        <td><button type="submit" name="inicioPrivado" class="botonInicioPrivado">INICIAR SESIÓN</button></td>
                     </tr>
                     <tr>
-                        <td><button type="submit" name="cancel" class="botonCancelar">Cancelar</button></td>
+                        <td><button type="submit" name="cancel" class="botonCancelar">CANCELAR</button></td>
                         </tr>
                 </table>
             </form>
@@ -31,7 +31,7 @@
         <div class="formulacioInicioSesion">
             <h3>¿NECESITAS UNA CUENTA?</h3>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formLogin" method="post">
-                <td><button type="submit" name="registrarse" class="botonRegistro">Registrate</button></td>
+                <td><button type="submit" name="registrarse" class="botonRegistro">REGÍSTRATE</button></td>
             </form>
         </div>
     </div>
