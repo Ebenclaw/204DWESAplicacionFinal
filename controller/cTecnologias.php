@@ -10,5 +10,5 @@
         exit;
     }
 
-    include $aVistas['layout'];
+    include $view['layout'];
 ?>

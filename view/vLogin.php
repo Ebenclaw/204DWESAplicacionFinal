@@ -24,7 +24,7 @@
                     </tr>
                     <tr>
                         <td><button type="submit" name="cancel" class="botonCancelar">CANCELAR</button></td>
-                        </tr>
+                    </tr>
                 </table>
             </form>
         </div>

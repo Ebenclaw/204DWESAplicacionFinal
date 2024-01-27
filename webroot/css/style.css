@@ -25,7 +25,7 @@ body{
     display: flex;
     background-attachment: fixed;
     background-size: 100% 110%;
-/*    justify-content: space-between;*/
+    /*    justify-content: space-between;*/
 }
 /*---ERROR 404---*/
 .error{
@@ -76,7 +76,13 @@ h2{
     gap: 5px;
 }
 #formInicioPublico button{
-    width: 30%;
+    width: 120PX;
+    background-color: white;
+    height: 30px;
+    font-size: 0.9rem;
+}
+#formInicioPublico button:hover{
+    color: grey;
 }
 /*---CAROUSEL---*/
 slider {
@@ -154,7 +160,7 @@ slider {
 }
 .formulacioInicioSesion h3{
     font-weight: normal;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 .formulacioInicioSesion table{
     width: 100%;
@@ -180,6 +186,104 @@ slider {
     font-size: 1rem;
     border-bottom: 1px solid grey;
     margin-bottom: 30px;
+}
+/*---REGISTRO---*/
+.registro{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.registro h3{
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.registro .container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+}
+.formulacioRegistro{
+    width: 500px;
+}
+.formulacioRegistro table{
+    width: 100%;
+    height: 100%;
+}
+.formulacioRegistro input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1rem;
+    border-bottom: 1px solid grey;
+    margin-bottom: 30px;
+}
+.formulacioRegistro button{
+    margin-bottom: 40px;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.formulacioRegistro button:hover{
+    color: grey;
+}
+.formulacioRegistro input[name="newPassword2"]{
+    margin-bottom: 60px;
+}
+/*---INICIO PRIVADO---*/
+.inicioPrivado{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.inicioPrivado .container{
+    width: 100%;
+}
+#formInicioPrivado{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+#formInicioPrivado button{
+    width: 220px;
+    background-color: white;
+    border-radius: none;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    font-size: 1rem;
+}
+#formInicioPrivado button:hover{
+    color: #ccc;
+}
+.mensajeBienvenida{
+    font-size: 1.1rem;
+}
+/*---WIP---*/
+.wip{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.wip h3{
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.wip p{
+    font-size: 1.1rem;
+}
+.wip button{
+    margin-bottom: 40px;
+    width: 496px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+    margin-top: 40px;
+}
+.wip button:hover{
+    color: #ccc;
 }
 /*---TECNOLOGIAS---*/
 .tecnologias .container1{
