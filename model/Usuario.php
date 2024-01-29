@@ -6,6 +6,15 @@
  * @since 22/01/2023
  */
 
+/**
+ * 
+ * Clase Usuario
+ * 
+ * Clase Usuario que contiene las funciones necesarias para validar los campos de un formulario.
+ * 
+ * @source Usuario.php
+ * @copyright 2022-2024 DAW2
+ */
 class Usuario {
     /*
      * Atributos de Usuario

@@ -21,6 +21,7 @@
             if ($key === 'user204DWESLoginLogout') {
                 echo("<u>$key</u> => <b>" . $value->getDescUsuario() . "</b><br>");
             }
+            echo("<u>$key</u> => <b>" . $value . "</b><br>");
         }
     } else {
         echo '<h2>La variable <b>$_SESSION</b> no está definida</h2>';
