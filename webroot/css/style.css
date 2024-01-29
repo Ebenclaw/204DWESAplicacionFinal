@@ -329,6 +329,23 @@ slider {
     text-align: center;
     border: 1px solid grey;
 }
+/*---DETALLE---*/
+.detalle{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.detalle .botonVolver{
+    margin-bottom: 40px;
+    width: 496px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.detalle .botonVolver:hover{
+    color: #ccc;
+}    
 /*---TECNOLOGIAS---*/
 .tecnologias .container1{
     width: 100vw;

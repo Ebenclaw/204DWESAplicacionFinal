@@ -14,7 +14,7 @@
             <button type="submit" name="mtoDepartamento" class="botonMtoDepartamento">MTO. DEPARTAMENTOS</button>
             <button type="submit" name="detalle" class="botonDetalle">DETALLE</button>
             <button type="submit" name="editarPerfil" class="botonEditarPerfil">EDITAR PERFIL</button>
-            <button type="submit" name="rest" class="botonRest">REST</button>
+            <button type="submit" name="rest" class="botonRest">REST - AEMET</button>
         </form>
         <div class="mensajeBienvenida">
             <?php

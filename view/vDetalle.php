@@ -19,14 +19,22 @@
         echo '<h3>$_SESSION</h3>';
         foreach ($_SESSION as $key => $value) {
             if ($key === 'user204DWESLoginLogout') {
-                echo("<u>$key</u> => <b>" . $value->getDescUsuario() . "</b><br>");
+                echo("<u>$key</u> => [<br>");
+                echo("<u>codUsuario</u> => <b>" . $value->getCodUsuario() . "</b><br>");
+                echo("<u>password</u> => <b>" . $value->getPassword() . "</b><br>");
+                echo("<u>descUsuario</u> => <b>" . $value->getDescUsuario() . "</b><br>");
+                echo("<u>numConexiones</u> => <b>" . $value->getNumAcceso() . "</b><br>");
+                echo("<u>fechaUltimaConexion</u> => <b>" . $value->getFechaHoraUltimaConexion() . "</b><br>");
+                echo("<u>fechaHoraUltimaConexionAnterior</u> => <b>" . $value->getFechaHoraUltimaConexionAnterior() . "</b><br>");
+                echo("<u>perfil</u> => <b>" . $value->getPerfil() . "</b><br>]");
+            } else {
+                echo("<u>$key</u> => <b>" . $value . "</b><br>");
             }
-            echo("<u>$key</u> => <b>" . $value . "</b><br>");
         }
     } else {
         echo '<h2>La variable <b>$_SESSION</b> no está definida</h2>';
     }
-
+    
     // $_COOKIE
     echo('<div class="ejercicio">');
     echo('<h3>$_COOKIE</h3>');

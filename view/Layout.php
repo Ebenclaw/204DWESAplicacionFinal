@@ -29,7 +29,7 @@
                         <img alt="herramientas" src="../webroot/image/GitHub.png" />
                     </button>
                 </form>-->
-                <a href="#" ><img id="rss" src="webroot/image/rss.png" alt="rss"></a>
+                <a href="doc/RSS.xml" ><img id="rss" src="webroot/image/rss.png" alt="rss"></a>
                 <a href="https://github.com/Ebenclaw/204DWESAplicacionFinal" target="_blank"><img id="git" src="../webroot/image/GitHub.png" alt="GitHub"></a>
                 <a href="#" ><img id="doc" src="webroot/image/phpdoc.png" alt="PHPDoc"></a>
                 <a href="doc/CurrículumRebecaSánchezPérez.pdf" target="_blank"><img id="curriculum" src="webroot/image/cv.png" alt="curriculum"></a>
