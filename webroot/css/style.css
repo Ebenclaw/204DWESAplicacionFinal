@@ -285,6 +285,50 @@ slider {
 .wip button:hover{
     color: #ccc;
 }
+/*---REST---*/
+.rest{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
+}
+.rest #formRest button{
+    margin-bottom: 40px;
+    width: 496px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.rest #formRest .botonVolver{
+    margin-top: 40px;
+}
+.rest button:hover{
+    color: #ccc;
+}
+.rest #formRest select{
+    margin-bottom: 40px;
+    width: 450px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.mensajeAEMET{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.rest .tablaAEMET{
+    width: 40%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.rest .tablaAEMET th{
+    border: 1px solid black;
+    padding: 5px;
+}
+.rest .tablaAEMET td{
+    text-align: center;
+    border: 1px solid grey;
+}
 /*---TECNOLOGIAS---*/
 .tecnologias .container1{
     width: 100vw;

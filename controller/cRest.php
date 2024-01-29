@@ -8,17 +8,23 @@
 
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaAnterior'] = 'rest'; // Almaceno la página anterior para poder volver
-    $_SESSION['paginaActual'] = 'inicioPrivado'; // Asigno a la página en curso la pagina de inicioPrivado
-    header('Location: index.php'); // Redirecciono al index de la APP
-    exit;
+    // Redirige a la página de inicio privado
+    $_SESSION['paginaActiva'] = 'inicioPrivado';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
 }
 
     // 372745 -> Salamanca
     // $codigoBenavente = '490219';
     // 492755 -> Zamora
     // 240896 ->Leon
-    $_SESSION['apiAEMET'] = REST::apiAEMET(); //$_REQUEST['municipìo']
+if (isset($_REQUEST['solicitar'])) {
+    $_SESSION['municipioSeleccionada'] = $_REQUEST['municipio'];
+    $_SESSION['apiAEMET'] = REST::apiAEMET($_SESSION['municipioSeleccionada']); //$_REQUEST['municipìo']
+    header('Location: index.php'); // Redirecciono al index de la APP
     exit;
+}
 
 include $view['layout'];
 ?>

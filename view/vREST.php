@@ -9,34 +9,39 @@
 </header>
 <main class="rest">
     <div class="container">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formDetalle" method="post">
-            <button type="submit" name="volver" class="botonVolver">Volver</button>
-        </form>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formRest" method="post">
             <select name="municipio" id="municipio">
-                <option value="490219">Benavente</option>
-                <option value="492755">Zamora</option>
-                <option value="240896">Leon</option>
-                <option value="372745">Salamanca</option>
+                <option value="" default>-Selecciona un municipio-</option>
+                <option value="49021">Benavente</option>
+                <option value="49200">Santa Cristina de la Polvorosa</option>
+                <option value="49187">San Cristóbal de Entreviñas</option>
+                <option value="49041">Castrogonzalo</option>
+                <option value="49275">Zamora</option>
+                <option value="24089">León</option>
+                <option value="37107">Ciudad Rodrigo</option>
+                <option value="37274">Salamanca</option>
             </select>
+            <button type="submit" name="solicitar" class="botonSolicitar">SOLICITAR PRONÓSTICO</button>
         </form>
-        <div class="temperatura">
+        <div class="infoApi">
             <?php
-            print_r($_SESSION['apiAEMET']);
-//            if (isset($_SESSION['apiAEMET']) && !is_null($_SESSION['apiAEMET'])) {
-//                $respuestaAPI = <<<IMAGENTITULOAPI
-//                    <div class="container">
-//                    <div class="">
-//                        <img class='' src='{$_SESSION['apiAEMET']['url']}'>
-//                        <div class="">
-//                            <p class="card-text">{$_SESSION['apiNasa']['titulo']}</p><br>
-//                            <p class="card-text">{$_SESSION['apiNasa']['explicacion']}</p>
-//                        </div>
-//                    </div>
-//                IMAGENTITULOAPI;
-//                echo $respuestaAPI;
-//            }
+            if (isset($_SESSION['apiAEMET'])&&$_SESSION['municipioSeleccionada']!=null) {
+                echo('<p class="mensajeAEMET">Según la <a href="'.$_SESSION['apiAEMET']['origen']['enlace'].'" target="_blank">AEMET</a>, el pronóstico de <u>' . $_SESSION['apiAEMET']['nombre'] . '</u>, de la provincia de <u>' . $_SESSION['apiAEMET']['provincia'] . '</u>, es el siguiente:</p>');
+                //var_dump($_SESSION['apiAEMET']['prediccion']['dia'][1]['temperatura']);
+                echo('<table class="tablaAEMET">');
+                echo('<tr><th>Hora</th><th>Temperatura</th></tr>');
+                for ($i = 0; $i < 24; $i++) {
+                    echo('<tr>');
+                    echo('<td>' . $_SESSION['apiAEMET']['prediccion']['dia'][1]['temperatura'][$i]['periodo'] . ':00</td>');
+                    echo('<td>' . $_SESSION['apiAEMET']['prediccion']['dia'][1]['temperatura'][$i]['value'] . 'ºC</td>');
+                    echo('</tr>');
+                }
+                echo('</table>');
+            }
             ?>
         </div>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formRest" method="post">
+            <button type="submit" name="volver" class="botonVolver">VOLVER</button>
+        </form>
     </div>
 </main>

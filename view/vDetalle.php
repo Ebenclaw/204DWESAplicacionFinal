@@ -2,15 +2,15 @@
 /*
  * @author Rebeca Sánchez Pérez
  * @version 1.0
- * @since 17/01/2023
+ * @since 17/01/2024
  */
 ?>
-<h2>Detalle</h2>
+<h2>DETALLE</h2>
 </header>
 <main class="detalle">
     <div class="container">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formDetalle" method="post">
-            <button type="submit" name="volver" class="botonVolver">Volver</button>
+            <button type="submit" name="volver" class="botonVolver">VOLVER</button>
         </form>
     </div>
     <?php
