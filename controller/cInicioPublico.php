@@ -10,6 +10,15 @@ if (!isset($_COOKIE['idioma'])) {
     setcookie('idioma', 'ES', time() + 2592000);
 }
 
+// Se comprueba que se pulsa el boton info
+if (isset($_REQUEST['info'])) {
+    // Redirige a la página de login
+    $_SESSION['paginaActiva'] = 'informacion';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
 // Se comprueba que se pulsa el boton login
 if (isset($_REQUEST['login'])) {
     // Redirige a la página de login

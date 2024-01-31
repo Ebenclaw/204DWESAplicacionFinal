@@ -28,7 +28,7 @@ class UsuarioPDO implements UsuarioDB {
                         $oResultado->T01_DescUsuario,
                         $oResultado->T01_NumConexiones,
                         $oResultado->T01_FechaHoraUltimaConexion,
-                        $oResultado->T01_FechaHoraUltimaConexionAnterior = null,
+                        $oResultado->T01_FechaHoraUltimaConexionAnterior,
                         $oResultado->T01_Perfil
                 );
             }
@@ -41,6 +41,7 @@ class UsuarioPDO implements UsuarioDB {
 
         $oUsuario->setnumAcceso($oUsuario->getnumAcceso() + 1);
         $oUsuario->setfechaHoraUltimaConexionAnterior($oUsuario->getfechaHoraUltimaConexion());
+        $oUsuario->setfechaHoraUltimaConexion(date('Y-m-d H:i:s'));
 
         //Realizamos un uptade
         $consultaActualizacionFechaUltimaConexion = <<<CONSULTA

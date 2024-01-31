@@ -25,7 +25,7 @@
         </form>
         <div class="infoApi">
             <?php
-            if (isset($_SESSION['apiAEMET'])&&$_SESSION['municipioSeleccionada']!=null) {
+            if (isset($_SESSION['apiAEMET'])&&$_SESSION['municipioSeleccionado']!=null) {
                 echo('<p class="mensajeAEMET">Según la <a href="'.$_SESSION['apiAEMET']['origen']['enlace'].'" target="_blank">AEMET</a>, el pronóstico de <u>' . $_SESSION['apiAEMET']['nombre'] . '</u>, de la provincia de <u>' . $_SESSION['apiAEMET']['provincia'] . '</u>, es el siguiente:</p>');
                 //var_dump($_SESSION['apiAEMET']['prediccion']['dia'][1]['temperatura']);
                 echo('<table class="tablaAEMET">');

@@ -25,8 +25,8 @@ class Usuario {
     private $descUsuario;
     private $numConexiones;
     private $fechaUltimaConexion;
+    private $fechaHoraUltimaConexionAnterior;
     private $perfil;
-    private $imagenUsuario;
 
     /*
      * Constructor de Usuario

@@ -20,8 +20,8 @@ if (isset($_REQUEST['volver'])) {
     // 492755 -> Zamora
     // 240896 ->Leon
 if (isset($_REQUEST['solicitar'])) {
-    $_SESSION['municipioSeleccionada'] = $_REQUEST['municipio'];
-    $_SESSION['apiAEMET'] = REST::apiAEMET($_SESSION['municipioSeleccionada']); //$_REQUEST['municipìo']
+    $_SESSION['municipioSeleccionado'] = $_REQUEST['municipio'];
+    $_SESSION['apiAEMET'] = REST::apiAEMET($_SESSION['municipioSeleccionado']); //$_REQUEST['municipìo']
     header('Location: index.php'); // Redirecciono al index de la APP
     exit;
 }
