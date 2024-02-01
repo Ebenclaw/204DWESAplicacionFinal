@@ -5,7 +5,7 @@
  * @since 17/01/2023
  */
   if(isset($_REQUEST['volver'])){
-        $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+        $_SESSION['paginaActiva'] = 'inicioPublico';
         header('location: index.php');
         exit;
     }

@@ -138,22 +138,22 @@ slider {
 }
 
 .slider .slide:nth-child(2) {
-    background-image: url('../image/userlmn_4422135813c8d4c72c03b206bce57a09.jpg');
+    background-image: url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
     animation-delay: -10s;
 }
 
 .slider .slide:nth-child(3) {
-    background-image: url('https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    background-image: url('../image/sesion.PNG');
     animation-delay: -20s;
 }
 
 .slider .slide:nth-child(4) {
-    background-image: url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    background-image: url('../image/tablas.PNG');
     animation-delay: -30s;
 }
 
 .slider .slide:nth-child(5) {
-    background-image: url('../image/userlmn_9bce9203290a75a0df357f5ac314d474.png');
+    background-image: url('../image/diagramaYRelacion.png');
     animation-delay: -40s;
 }
 
@@ -375,30 +375,65 @@ slider {
     color: #ccc;
 }    
 /*---TECNOLOGIAS---*/
-.tecnologias .container1{
-    width: 100vw;
-    height: 100vh;
+.tecnologias{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    margin-top: 183px;
     display: flex;
     flex-flow: column;
 }
-.tecnologias .container1 div{
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
+.tecnologias p{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
-.tecnologias .container1 div img{
-    width: 50px;
-    height: 50px;
+.tecnologias .container1, .tecnologias .container2, .tecnologias .container3{
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.tecnologias .container3 div{
+    width: 300px;
+}
+.tecnologias div div{
+    width: 200px;
+    height: 175px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.tecnologias div div a img{
+    max-width: 100%;
+    height: 100px;
+    transition: all .2s ease-in;
+}
+.tecnologias div div a img:hover{
+    height: 125px;
+}
+.formTecnologiasVolver{
+    position: fixed;
+    top: 150px;
+    right: 175px;
+}
+.formTecnologiasVolver button{
+    width: 400px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
 }
 /*---FOOTER---*/
 footer{
+    z-index: 1;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 40px;
 }
 footer #derechos{
-    width: 75%;
+    width: 65%;
     height: 50px;
     padding: 15px 15px;
     font-size: 1rem;
@@ -407,11 +442,28 @@ footer #derechos{
     text-decoration: underline;
 }
 footer #fotos{
+    width: 35%;
     position: absolute;
     bottom: 0;
     right: 200px;
+    display: flex;
+    justify-content: flex-end;
 }
-footer img{
+footer #fotos .formTecnologias{
+    z-index: 1;
+    width: 40px;
+}
+.formTecnologias button{
+    width: 40px;
+    background: none;
+    border: none;
+}
+footer #fotos .formTecnologias img{
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+footer a img{
     height: 40px;
     background-color: white;
     border-radius: 50%;

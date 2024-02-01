@@ -9,5 +9,10 @@
             <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version1.0</link>
             <description>Ultima version de mi aplicacion final</description>
         </item>
+        <item>
+            <title>Nueva version 01/02/2024</title>
+            <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version1.1</link>
+            <description>Paso a explotacion de la app antes del examen ¿Que incorpora esta version?</description>
+        </item>
     </channel>
 </rss>

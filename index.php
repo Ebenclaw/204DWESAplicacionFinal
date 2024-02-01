@@ -17,6 +17,14 @@ if(!isset($_SESSION['paginaActiva'])){
     $_SESSION['paginaActiva'] = 'inicioPublico';
 }
 
+// Se comprueba que se ha pulsado el boton de tecnologias
+if(isset($_REQUEST['tecnologias'])){
+    // Se le da el valor 'tecnologias' a $_SESSION['paginaActiva']
+    $_SESSION['paginaActiva'] = 'tecnologias';
+    // Se guarda el inicio publio en la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPublico';
+}
+
 // Carga el controlador de la pagina en curso
 require_once $controller[$_SESSION['paginaActiva']];
 
