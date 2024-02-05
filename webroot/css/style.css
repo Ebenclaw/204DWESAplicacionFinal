@@ -319,10 +319,18 @@ slider {
     height: 50%;
     position: absolute;
     margin-top: 183px;
+    display: flex;
+    flex-flow: column;
+}
+.rest .container{
+    width: 40%;
+}
+.rest .wrapper{
+    width: 40%;
 }
 .rest #formRest button{
     margin-bottom: 40px;
-    width: 496px;
+    width: 300px;
     height: 40px;
     font-size: 1rem;
     background-color: white;
@@ -335,7 +343,7 @@ slider {
 }
 .rest #formRest select{
     margin-bottom: 40px;
-    width: 450px;
+    width: 300px;
     height: 40px;
     font-size: 1rem;
     background-color: white;
