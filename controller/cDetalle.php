@@ -9,6 +9,8 @@
 if (isset($_REQUEST['volver'])) {
     // Redirige a la página de inicio privado
     $_SESSION['paginaActiva'] = 'inicioPrivado';
+    // Registra detalle como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'detalle';
     // Se carga el index
     header('Location: index.php');
     exit();

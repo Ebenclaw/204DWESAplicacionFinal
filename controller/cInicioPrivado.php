@@ -20,6 +20,8 @@ if (isset($_REQUEST['cerrarSesion'])) {
     session_destroy();
     // Redirige a la página de Inicio Publico
     $_SESSION['paginaActiva'] = 'inicioPublico';
+    // Registra inicio publico como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index
     header('Location: index.php');
     exit();
@@ -29,6 +31,8 @@ if (isset($_REQUEST['cerrarSesion'])) {
 if (isset($_REQUEST['mtoDepartamento'])) {
     // Redirige a la página de WIP
     $_SESSION['paginaActiva'] = 'wip';
+    // Registra inicio privado como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index
     header('Location: index.php');
     exit();
@@ -38,6 +42,8 @@ if (isset($_REQUEST['mtoDepartamento'])) {
 if (isset($_REQUEST['detalle'])) {
     // Redirige a la página de Detalle
     $_SESSION['paginaActiva'] = 'detalle';
+    // Registra inicio privado como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index
     header('Location: index.php');
     exit();
@@ -47,6 +53,8 @@ if (isset($_REQUEST['detalle'])) {
 if (isset($_REQUEST['editarPerfil'])) {
     // Redirige a la página de Mi Cuenta
     $_SESSION['paginaActiva'] = 'wip';
+    // Registra inicio privado como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index
     header('Location: index.php');
     exit();
@@ -56,6 +64,8 @@ if (isset($_REQUEST['editarPerfil'])) {
 if (isset($_REQUEST['rest'])) {
     // Redirige a la página de Mi Cuenta
     $_SESSION['paginaActiva'] = 'rest';
+    // Registra inicio privado como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index
     header('Location: index.php');
     exit();

@@ -14,10 +14,10 @@
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formLogin" method="post">
                 <table>
                     <tr>
-                        <td><input placeholder="USUARIO" class="obligatorio" type="text" name="usuario" value="<?php echo (isset($_REQUEST['usuario']) ? $_REQUEST['usuario'] : ''); ?>"></td>
+                        <td><input placeholder="<?php echo (!empty($aErrores["usuario"]) ? $aErrores["usuario"] : 'USUARIO'); ?>" class="obligatorio" type="text" name="usuario" value="<?php echo (isset($_REQUEST['usuario']) ? $_REQUEST['usuario'] : ''); ?>"></td>
                     </tr>
                     <tr>
-                        <td><input placeholder="CONTRASEÑA" class="obligatorio" type="password" name="password" value="<?php echo (isset($_REQUEST['password']) ? $_REQUEST['password'] : ''); ?>"></td>
+                        <td><input placeholder="<?php echo (!empty($aErrores["usuario"]) ? $aErrores["usuario"] : 'CONTRASEÑA'); ?>" class="obligatorio" type="password" name="password" value="<?php echo (isset($_REQUEST['password']) ? $_REQUEST['password'] : ''); ?>"></td>
                     </tr>
                     <tr>
                         <td><button type="submit" name="inicioPrivado" class="botonInicioPrivado">INICIAR SESIÓN</button></td>

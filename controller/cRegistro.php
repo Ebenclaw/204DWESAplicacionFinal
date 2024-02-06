@@ -8,6 +8,8 @@
 //Si el usuario pulsa el botón 'Cancelar', mando al usuario al index de DWES
 if (isset($_REQUEST['cancel'])) {
     $_SESSION['paginaActiva'] = 'inicioPublico'; // Asigno a la pagina en curso la pagina de anterior que es la de login
+    // Registra inicio privado como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'registro';
     header('Location: index.php'); // Redirecciono al index de la APP
     exit;
 }

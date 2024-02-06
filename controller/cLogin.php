@@ -9,6 +9,8 @@
 if (isset($_REQUEST['cancel'])) {
     // Redirige a la página de anterior inicio publico
     $_SESSION['paginaActiva'] = 'inicioPublico';
+    // Registra login como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'login';
     // Se carga el index
     header('Location: index.php');
     exit();
@@ -62,6 +64,8 @@ if ($entradaOK) {
     //Redireccionamos a el inicio privado
     $_SESSION['user204DWESLoginLogout'] = $oUsuarioActivo;
     $_SESSION['paginaActiva'] = 'inicioPrivado';
+    // Registra inicio publico como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'login';
     // Se carga el index
     header('Location: index.php');
     exit();
