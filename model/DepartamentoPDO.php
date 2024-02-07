@@ -17,28 +17,27 @@ class DepartamentoPDO {
         $aDepartamentos = [];
         //Consulta SQL para validar si la descripcion del departamento existe
         $sql = <<<SQL
-            select * from T02_Departamento where T02_DescDepartamento like '%".$descDepartamento."%';
+            SELECT * FROM T02_Departamento 
+            WHERE T02_DescDepartamento LIKE'%$descDepartamento%';
         SQL;
 
         // Se llama a la funcion ejecutarConsulta para devolver el resultado de la consulta de seleccion
         $resultadoConsulta = DBPDO::ejecutaConsulta($sql);
 
         // Se recorre cada fila, es decir, cada departamento
-        while ($oDepartamento = $resultadoConsulta->fetchObject()) {
-            $aDepartamentos[$oDepartamento->T02_CodDepartamento] = new Departamento(
-                    $oDepartamento->T02_CodDepartamento,
-                    $oDepartamento->T02_DescDepartamento,
-                    $oDepartamento->T02_FechaCreacionDepartamento,
-                    $oDepartamento->T02_VolumenDeNegocio,
-                    $oDepartamento->T02_FechaBajaDepartamento);
-//            array_push($aDepartamentos, new Departamento(
-//                            $oDepartamento->T02_CodDepartamento,
-//                            $oDepartamento->T02_DescDepartamento,
-//                            $oDepartamento->T02_FechaCreacionDepartamento,
-//                            $oDepartamento->T02_VolumenDeNegocio,
-//                            $oDepartamento->T02_FechaBajaDepartamento));
+        if ($resultadoConsulta !== false) {
+            while ($oDepartamento = $resultadoConsulta->fetchObject()) { // Recorro el resultado de la consulta y creo un objeto por iteración (elemento)
+                $aDepartamentos[$oDepartamento->T02_CodDepartamento] = new Departamento(// Creo un array asociativo usando de key el propio código de Departamento y almaceno un objeto Departamento
+                        $oDepartamento->T02_CodDepartamento,
+                        $oDepartamento->T02_DescDepartamento,
+                        $oDepartamento->T02_FechaCreacionDepartamento,
+                        $oDepartamento->T02_VolumenDeNegocio,
+                        $oDepartamento->T02_FechaBajaDepartamento);
+            }
+            return $aDepartamentos; // Devuelvo el 'array' con todos los Departamentos
+        } else {
+            return false; // Si ocurre algún error devolvemos 'false'
         }
-        return $aDepartamentos;
     }
 
     public static function altaDepartamento() {
