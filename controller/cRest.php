@@ -5,11 +5,15 @@
  * @version 1.0
  * @since 21/01/2024
  */
-// Se instancia el array que usara la vista para mostrar la informacion
-$aVistaRest = [
-    'apiAEMET' => [],
-    'apiHoroscopo' => []
-];
+
+// Se controla que el usuario haya sido logeado
+if (empty($_SESSION['user204DWESLoginLogout'])) {
+    // Redirige a la página de inicio
+    $_SESSION['paginaActiva'] = 'inicioPublico';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
 
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaAnterior'] = 'rest'; // Almaceno la página anterior para poder volver
@@ -39,6 +43,12 @@ if (isset($_REQUEST['solicitarHoroscopo'])) {
     header('Location: index.php');
     exit();
 }
+
+// Se instancia el array que usara la vista para mostrar la informacion
+$aVistaRest = [
+    'apiAEMET' => [],
+    'apiHoroscopo' => []
+];
 
 if (isset($_SESSION['municipioSeleccionado']) && $_SESSION['municipioSeleccionado']!= null) {
     // Se hace la llamada a la API de la AEMET y se guarda en un array que usara la vista

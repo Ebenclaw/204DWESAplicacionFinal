@@ -10,7 +10,7 @@
 <main class="wip">
     <div class="container">
         <h3>WORK IN PROGRESS</h3>
-        <p>Lo sentimos, esta parte de la aplicación aun está en desarrollo</p>
+        <p>Lo sentimos, esta parte de la aplicación aún está en desarrollo</p>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formWIP" method="post">
             <button type="submit" name="volver" class="botonVolver">VOLVER</button>
         </form>
