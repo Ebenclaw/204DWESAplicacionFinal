@@ -1,5 +1,4 @@
 <?php
-
 /*
  * @author Rebeca Sánchez Pérez
  * @version 1.0
@@ -16,7 +15,7 @@
  * @copyright 2022-2024 DAW2
  */
 class Departamento {
-
+    
     /*
      * Atributos de Departamento
      */
@@ -31,7 +30,7 @@ class Departamento {
      * Constructor de Departamento
      */
 
-    public function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento) {
+    public function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento = null) {
         $this->codDepartamento = $codDepartamento;
         $this->descDepartamento = $descDepartamento;
         $this->fechaCreacionDepartamento = $fechaCreacionDepartamento;
@@ -42,48 +41,48 @@ class Departamento {
     /*
      * Getter
      */
-    
-    public function getCodUsuario() {
-        return $this->codUsuario;
+
+    public function getCodDepartamento() {
+        return $this->codDepartamento;
     }
 
-    public function getPassword() {
-        return $this->password;
+    public function getDescDepartamento() {
+        return $this->descDepartamento;
     }
 
-    public function getDescUsuario() {
-        return $this->descUsuario;
+    public function getFechaCreacionDepartamento() {
+        return $this->fechaCreacionDepartamento;
     }
 
-    public function getNumAcceso() {
-        return $this->numAcceso;
+    public function getVolumenDeNegocio() {
+        return $this->volumenDeNegocio;
     }
 
-    public function getFechaHoraUltimaConexion() {
-        return $this->fechaHoraUltimaConexion;
+    public function getFechaBajaDepartamento() {
+        return $this->fechaBajaDepartamento;
     }
 
     /*
      * Setter
      */
-    
-    public function setCodUsuario($codUsuario): void {
-        $this->codUsuario = $codUsuario;
+        
+    public function setCodDepartamento($codDepartamento): void {
+        $this->codDepartamento = $codDepartamento;
     }
 
-    public function setPassword($password): void {
-        $this->password = $password;
+    public function setDescDepartamento($descDepartamento): void {
+        $this->descDepartamento = $descDepartamento;
     }
 
-    public function setDescUsuario($descUsuario): void {
-        $this->descUsuario = $descUsuario;
+    public function setFechaCreacionDepartamento($fechaCreacionDepartamento): void {
+        $this->fechaCreacionDepartamento = $fechaCreacionDepartamento;
     }
 
-    public function setNumAcceso($numAcceso): void {
-        $this->numAcceso = $numAcceso;
+    public function setVolumenDeNegocio($volumenDeNegocio): void {
+        $this->volumenDeNegocio = $volumenDeNegocio;
     }
 
-    public function setFechaHoraUltimaConexion($fechaHoraUltimaConexion): void {
-        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+    public function setFechaBajaDepartamento($fechaBajaDepartamento): void {
+        $this->fechaBajaDepartamento = $fechaBajaDepartamento;
     }
 }

@@ -30,7 +30,7 @@ if (isset($_REQUEST['cerrarSesion'])) {
 // Se comprueba que se pulsa el boton Mantenimiento Departamento
 if (isset($_REQUEST['mtoDepartamento'])) {
     // Redirige a la página de WIP
-    $_SESSION['paginaActiva'] = 'wip';
+    $_SESSION['paginaActiva'] = 'consultarDepartamento';
     // Registra inicio privado como la pagina anterior
     $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index

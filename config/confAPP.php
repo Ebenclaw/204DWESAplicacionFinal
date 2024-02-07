@@ -14,6 +14,7 @@ require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/REST.php';
 require_once 'model/Departamento.php';
+require_once 'model/DepartamentoPDO.php';
 
 // El array $controller almacena los ficheros del controlador
 $controller = [

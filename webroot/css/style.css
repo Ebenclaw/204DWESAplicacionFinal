@@ -403,7 +403,34 @@ slider {
 }
 .detalle .botonVolver:hover{
     color: #ccc;
-}    
+}
+/*---MANTENIMIENTO DEPARTAMENTOS---*/
+.mtoDepartamentos{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin-top: 183px;
+}
+.mtoDepartamentos .botones{
+    margin-bottom: 40px;
+    width: 496px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.mtoDepartamentos button:hover{
+    color: #ccc;
+}
+.mtoDepartamentos #formMto #busquedaSimple{
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+}
 /*---TECNOLOGIAS---*/
 .tecnologias{
     width: 90%;
