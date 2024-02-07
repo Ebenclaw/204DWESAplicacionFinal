@@ -52,8 +52,6 @@ class REST {
      * @return array|null En caso de éxito, devuelve toda la información. En caso de error, devuelve null.
      */
     public static function apiHoroscopo($signoZodiacal, $fechaSolicitada) { //$signoZodiacal, $fechaSolicitada
-        // https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=taurus&day=2024-01-05
-        // https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign={$signoZodiacal}&day={$fechaSolicitada}
         try {
             // Solicitud a la API
             $solicitudApi = file_get_contents("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign={$signoZodiacal}&day={$fechaSolicitada}", true);
