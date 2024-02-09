@@ -12,6 +12,7 @@
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formInicioPrivado" method="post">
             <button type="submit" name="cerrarSesion" class="botonCerrarSesion">CERRAR SESIÓN</button>
             <button type="submit" name="mtoDepartamento" class="botonMtoDepartamento">MTO. DEPARTAMENTOS</button>
+            <button type="submit" name="mtoTrabajos" class="botonMtoTrabajos">MTO. TRABAJOS</button>
             <button type="submit" name="detalle" class="botonDetalle">DETALLE</button>
             <button type="submit" name="editarPerfil" class="botonEditarPerfil">EDITAR PERFIL</button>
             <button type="submit" name="rest" class="botonRest">REST</button>

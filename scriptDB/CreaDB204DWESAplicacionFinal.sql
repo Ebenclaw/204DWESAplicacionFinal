@@ -29,6 +29,17 @@ T02_FechaCreacionDepartamento datetime,
 T02_VolumenDeNegocio float,
 T02_FechaBajaDepartamento datetime default null)engine=innodb;
 
+/*Creacion de la tabla Trabajo*/
+create table if not exists T11_Trabajo(
+T11_CodTrabajo varchar(3) primary key,
+T11_DescTrabajo varchar(255),
+T11_FechaCreacion datetime,
+T11_FechaInicio datetime,
+T11_FechaFin datetime,
+T11_Estado enum('pendiente','en curso','finalizado'),
+T11_Coste float,
+T11_FechaBaja datetime default null)engine=innodb;
+
 /*Creacion del usuario*/
 create user 'user204DWESAplicacionFinal'@'%' identified by 'paso';
 grant all privileges on DB204DWESAplicacionFinal.* to 'user204DWESAplicacionFinal'@'%';

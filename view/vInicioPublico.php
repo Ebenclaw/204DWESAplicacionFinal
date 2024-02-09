@@ -18,35 +18,35 @@
         <table class="tablaInfo">
             <tr>
                 <td>Catálogo de requisitos</td>
-                <td><a href="doc/230129CatalogoDeRequisitos.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129CatalogoDeRequisitos.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Diagrama de casos de uso</td>
-                <td><a href="doc/230129DiagramaDeCasosDeUso.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129DiagramaDeCasosDeUso.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Diagrama de clases</td>
-                <td><a href="doc/230129DiagramaDeClases.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129DiagramaDeClases.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Arbol de navegación</td>
-                <td><a href="doc/230129ArbolDeNavegación.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129ArbolDeNavegación.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Relacion de ficheros</td>
-                <td><a href="doc/230129RelacionDeFicheros.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129RelacionDeFicheros.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Estructura de almacenamiento</td>
-                <td><a href="doc/230129EstandarDesarrolloDAWyEstructuraAlmacenamientoDWES.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/230129EstandarDesarrolloDAWyEstructuraAlmacenamientoDWES.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Modelo físico de datos</td>
-                <td><a href="doc/ModeloFisicoDeDatos.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/ModeloFisicoDeDatos.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Uso de $_SESSION</td>
-                <td><a href="doc/UsoDeLaSesionAppRebeca.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/UsoDeLaSesionAppRebeca.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
         </table>
     </div>

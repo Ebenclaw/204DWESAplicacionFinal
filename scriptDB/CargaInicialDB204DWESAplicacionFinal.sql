@@ -25,3 +25,11 @@ INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perf
     ('ismael', SHA2('ismaelpaso', 256), 'Ismael Ferreras García', 'usuario'),
     ('heraclio', SHA2('heracliopaso', 256), 'Heraclio Borbujo Moran', 'administrador'),
     ('amor', SHA2('amorpaso', 256), 'Amor Rodriguez Navarro', 'administrador');
+
+/*Se insertan valores en la tabla Departamento*/
+INSERT INTO T11_Trabajo (T11_CodTrabajo, T11_DescTrabajo, T11_FechaCreacion, T11_FechaInicio, T11_FechaFin, T11_Estado, T11_Coste) VALUES
+    ('C01', 'Poner la lavadora', '2024-02-08 14:00:00', '2024-02-09 15:30:00', '2024-02-09 15:35:00', 'finalizado', 6),
+    ('C02', 'Tender la ropa', '2024-02-08 14:00:00', '2024-02-09 16:45:00', NULL, 'en curso', 0),
+    ('C03', 'Aprobar DWES', '2024-01-26 11:02:50', '2024-01-27 12:00:00', NULL, 'en curso', 10.05),
+    ('F01', 'Ir a comprar al Mercadona', '2024-02-07 20:23:30', NULL, NULL, 'pendiente', 56.95),
+    ('F02', 'Echarle gasolina al coche', '2024-02-05 18:20:00', '2024-02-06 20:00:00', '2024-02-06 20:10:00', 'finalizado', 40.34);

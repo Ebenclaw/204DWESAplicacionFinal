@@ -14,5 +14,10 @@
             <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version1.1</link>
             <description>Paso a explotacion de la app antes del examen ¿Que incorpora esta version?</description>
         </item>
+        <item>
+            <title>Nueva version 09/02/2024</title>
+            <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version1.2</link>
+            <description>Paso a explotacion de la app con el uso de 2 API rest ¿Que incorpora esta versión?</description>
+        </item>
     </channel>
 </rss>
