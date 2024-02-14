@@ -5,7 +5,7 @@
  * @since 07/02/2024
  */
 ?>
-<h2>TECNOLOGIAS</h2>
+<h2>DEPARTAMENTOS</h2>
 </header>
 <main class="mtoDepartamentos">
     <div class="container">

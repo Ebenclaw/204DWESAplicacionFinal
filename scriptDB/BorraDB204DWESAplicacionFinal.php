@@ -25,16 +25,22 @@ try {
     $sql2 = <<< SQL
         drop table if exists dbs12302420.T01_Usuario;
     SQL;
+    // Consulta de borrado de la tabla trabajo
+    $sql3 = <<< SQL
+        drop table if exists dbs12302420.T11_Trabajo;
+    SQL;
     
     // Se preparan las consultas
     $consulta1 = $miDB->prepare($sql1);
     $consulta2 = $miDB->prepare($sql2);
+    $consulta3 = $miDB->prepare($sql3);
     // Se ejecutan las consultas
     $consulta1->execute();
     $consulta2->execute();
+    $consulta3->execute();
     
     // Se muestra el mensaje de exito
-    echo('Se han borrado las tablas "T02_Departamento" y "T01_Usuario" correctamente ✅');
+    echo('Se han borrado las tablas "T02_Departamento", "T01_Usuario" y "T11_Trabajo" correctamente ✅');
 } catch (PDOException $exception) {
     // Si aparecen errores, se muestra por pantalla el error
     echo('<div class="ejercicio"><span class="error">❌ Ha fallado la conexion: ' . $exception->getMessage() . '</span></div>');

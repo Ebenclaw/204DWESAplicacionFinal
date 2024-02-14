@@ -39,16 +39,27 @@ try {
         ('heraclio', SHA2('heracliopaso', 256), 'Heraclio Borbujo Moran', 'administrador'),
         ('amor', SHA2('amorpaso', 256), 'Amor Rodriguez Navarro', 'administrador');
     SQL;
+    // Consulta de insercion de datos en la tabla trabajo
+    $sql3 = <<< SQL
+        INSERT INTO T11_Trabajo (T11_CodTrabajo, T11_DescTrabajo, T11_FechaCreacion, T11_FechaInicio, T11_FechaFin, T11_Estado, T11_Coste) VALUES
+        ('C01', 'Poner la lavadora', '2024-02-08 14:00:00', '2024-02-09 15:30:00', '2024-02-09 15:35:00', 'finalizado', 6),
+        ('C02', 'Tender la ropa', '2024-02-08 14:00:00', '2024-02-09 16:45:00', NULL, 'en curso', 0),
+        ('C03', 'Aprobar DWES', '2024-01-26 11:02:50', '2024-01-27 12:00:00', NULL, 'en curso', 10.05),
+        ('F01', 'Ir a comprar al Mercadona', '2024-02-07 20:23:30', NULL, NULL, 'pendiente', 56.95),
+        ('F02', 'Echarle gasolina al coche', '2024-02-05 18:20:00', '2024-02-06 20:00:00', '2024-02-06 20:10:00', 'finalizado', 40.34);
+    SQL;
     
     // Se prepara la consulta
     $consulta1 = $miDB->prepare($sql1);
     $consulta2 = $miDB->prepare($sql2);
+    $consulta3 = $miDB->prepare($sql3);
     // Se ejecuta la consulta
     $consulta1->execute();
     $consulta2->execute();
+    $consulta3->execute();
    
     // Se muestra el mensaje de exito
-    echo('Se han insertado los datos a las tablas "T02_Departamento" y "T01_Usuario" correctamente ✅');
+    echo('Se han insertado los datos a las tablas "T02_Departamento", "T01_Usuario" y "T11_Trabajo" correctamente ✅');
 } catch (PDOException $exception) {
     // Si aparecen errores, se muestra por pantalla el error
     echo('<div class="ejercicio"><span class="error">❌ Ha fallado la conexion: ' . $exception->getMessage() . '</span></div>');

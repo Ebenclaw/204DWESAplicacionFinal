@@ -37,16 +37,30 @@ try {
             T01_Perfil enum('usuario','administrador') default 'usuario',
             T01_ImagenUsuario blob)engine=innodb; 
     SQL;
+    // Consulta de creacion de la tabla trabajo
+    $sql3 = <<< SQL
+        create table if not exists dbs12302420.T11_Trabajo(
+            T11_CodTrabajo varchar(3) primary key,
+            T11_DescTrabajo varchar(255),
+            T11_FechaCreacion datetime,
+            T11_FechaInicio datetime,
+            T11_FechaFin datetime,
+            T11_Estado enum('pendiente','en curso','finalizado'),
+            T11_Coste float,
+            T11_FechaBaja datetime default null)engine=innodb;
+    SQL;
     
     // Se preparan las consultas
     $consulta1 = $miDB->prepare($sql1);
     $consulta2 = $miDB->prepare($sql2);
+    $consulta3 = $miDB->prepare($sql3);
     // Se ejecutan las consultas
     $consulta1->execute();
     $consulta2->execute();
+    $consulta3->execute();
     
     // Se muestra el mensaje de exito
-    echo('Se han creado las tablas "T02_Departamento" y "T01_Usuario" correctamente ✅');
+    echo('Se han creado las tablas "T02_Departamento", "T01_Usuario" y "T11_Trabajo" correctamente ✅');
 } catch (PDOException $exception) {
     // Si aparecen errores, se muestra por pantalla el error
     echo('<div class="ejercicio"><span class="error">❌ Ha fallado la conexion: ' . $exception->getMessage() . '</span></div>');

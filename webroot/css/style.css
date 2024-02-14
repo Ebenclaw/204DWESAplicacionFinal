@@ -431,6 +431,33 @@ slider {
     border-bottom: 1px solid black;
     margin-bottom: 40px;
 }
+/*---MANTENIMIENTO TRABAJOS---*/
+.mtoTrabajos{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin-top: 183px;
+}
+.mtoTrabajos .botones{
+    margin-bottom: 40px;
+    width: 496px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.mtoTrabajos button:hover{
+    color: #ccc;
+}
+.mtoTrabajos #formMtoTrabajo #busquedaSimple{
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+}
 /*---TECNOLOGIAS---*/
 .tecnologias{
     width: 90%;

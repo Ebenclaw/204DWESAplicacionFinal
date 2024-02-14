@@ -15,6 +15,8 @@ require_once 'model/UsuarioPDO.php';
 require_once 'model/REST.php';
 require_once 'model/Departamento.php';
 require_once 'model/DepartamentoPDO.php';
+require_once 'model/Trabajo.php';
+require_once 'model/TrabajoPDO.php';
 
 // El array $controller almacena los ficheros del controlador
 $controller = [
@@ -30,7 +32,8 @@ $controller = [
     'wip' => 'controller/cWIP.php',
     'error' => 'controller/cError.php',
     'rest' => 'controller/cRest.php',
-    'consultarDepartamento' => 'controller/cMtoDepartamentos.php'
+    'consultarDepartamento' => 'controller/cMtoDepartamentos.php',
+    'consultarTrabajo' => 'controller/cMtoTrabajos.php'
 ];
 
 // El array $view almacena los ficheros de la vista
@@ -48,5 +51,6 @@ $view = [
     'wip' => 'view/vWIP.php',
     'error' => 'view/vError.php',
     'rest' => 'view/vREST.php',
-    'consultarDepartamento' => 'view/vMtoDepartamentos.php'
+    'consultarDepartamento' => 'view/vMtoDepartamentos.php',
+    'consultarTrabajo' => 'view/vMtoTrabajos.php'
 ];
