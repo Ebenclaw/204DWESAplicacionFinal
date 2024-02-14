@@ -13,23 +13,19 @@ class TrabajoPDO {
     }
 
     public static function buscaTrabajosPorDesc($descTrabajo = '') {
-        // Se inicializa un array que almacena objetos Trabajos relativos a cada registro de la consulta
-        $aTrabajos = [];
-        if($descTrabajo == null){
-            $sql = <<<SQL
-                select * from T11_Trabajo;
-            SQL;
-        }else{
-            //Consulta SQL para validar si la descripcion del trabajo existe
-            $sql = <<<SQL
-                select * from DB204DWESAplicacionFinal.T11_Trabajo where T11_DescTrabajo like '%".$descTrabajo."%';
-            SQL;
-        }
-        
+
+        //Consulta SQL para validar si la descripcion del trabajo existe
+        $sql = <<<SQL
+            select * from DB204DWESAplicacionFinal.T11_Trabajo where T11_DescTrabajo like '%$descTrabajo%';
+        SQL;
+
         // Se llama a la funcion ejecutarConsulta para devolver el resultado de la consulta de seleccion
         $resultadoConsulta = DBPDO::ejecutaConsulta($sql);
 
-        // Se recorre cada fila, es decir, cada departamento
+        // Se inicializa un array que almacena objetos Trabajos relativos a cada registro de la consulta
+        $aTrabajos = [];
+        
+        // Se recorre cada fila, es decir, cada trabajo
         while ($oT11Trabajo = $resultadoConsulta->fetchObject()) {
             $aTrabajos[$oT11Trabajo->T11_CodTrabajo] = new Trabajo(
                     $oT11Trabajo->T11_CodTrabajo,
@@ -41,6 +37,8 @@ class TrabajoPDO {
                     $oT11Trabajo->T11_Coste,
                     $oT11Trabajo->T11_FechaBaja);
         }
+        
+        //Se devuelven los trabajos
         return $aTrabajos;
     }
 

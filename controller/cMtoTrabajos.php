@@ -24,9 +24,9 @@ if (isset($_REQUEST['volver'])) {
     header('Location: index.php');
     exit();
 }
-//
-//// Se instancia el array que usara la vista para mostrar la informacion
-//$aVistaTrabajos = [];
+
+// Se instancia el array que usara la vista para mostrar la informacion
+$aTrabajosBuscadosVista = [];
 
 if (isset($_REQUEST['buscar'])) {
     $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc($_REQUEST['busquedaSimple']);
