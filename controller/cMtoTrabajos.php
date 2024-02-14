@@ -43,9 +43,6 @@ if (isset($_REQUEST['buscar'])) {
             'fechaBaja' => !is_null($oTrabajo->getFechaBaja()) ? $oTrabajo->getFechaBaja() : ''
         ];
     }
-    // Se carga el index
-    header('Location: index.php');
-    exit();
 }
 
 include $view['layout'];

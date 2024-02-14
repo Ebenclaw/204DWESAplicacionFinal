@@ -16,7 +16,7 @@ class TrabajoPDO {
 
         //Consulta SQL para validar si la descripcion del trabajo existe
         $sql = <<<SQL
-            select * from DB204DWESAplicacionFinal.T11_Trabajo where T11_DescTrabajo like '%$descTrabajo%';
+            select * from T11_Trabajo where T11_DescTrabajo like '%$descTrabajo%';
         SQL;
 
         // Se llama a la funcion ejecutarConsulta para devolver el resultado de la consulta de seleccion
