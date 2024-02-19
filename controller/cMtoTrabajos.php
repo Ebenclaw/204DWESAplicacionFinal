@@ -45,12 +45,12 @@ if (isset($_REQUEST['buscar'])) {
     $aTrabajosBuscados = [];
 
     // Se llama a la busqueda simple del modelo con el campo introducido en el input de busqueda
-    $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc($_REQUEST['busquedaSimple']);
+    $aTrabajosBuscados = TrabajoPDO::buscarTrabajosPorDesc($_REQUEST['busquedaSimple']);
     
 // Si no se ha pulsado el boton, se guardan TODOS los trabajos
 } else {
     // Se llama a la busqueda simple para listar TODOS los Trabajos
-    $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc();
+    $aTrabajosBuscados = TrabajoPDO::buscarTrabajosPorDesc();
 }
 
 // Se carga el array en un objeto para guardar los datos en el array de la vista

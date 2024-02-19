@@ -13,38 +13,38 @@
             <table>
                 <tr>
                     <td class="titulo">CÓDIGO DEL TRABAJO</td>
-                    <td><input placeholder="CÓDIGO" id="cod" class="obligatorio" type="text" name="codigo" disabled></td>
+                    <td><input value="<?php echo $codTrabajoAEditar; ?>" placeholder="CÓDIGO" id="cod" class="obligatorio" type="text" name="codigo" disabled></td>
                 </tr>
                 <tr>
                     <td class="titulo">DESCRIPCIÓN DEL TRABAJO</td>
-                    <td><input placeholder="DESCRIPCION" id="desc" class="obligatorio" type="text" name="descripcion"></td>
+                    <td><input value="<?php echo $descTrabajoAEditar; ?>" placeholder="DESCRIPCION" id="desc" class="obligatorio" type="text" name="descripcion"></td>
                 </tr>
                 <tr>
                     <td class="titulo">FECHA DE CREACIÓN</td>
-                    <td><input placeholder="FECHA CREACION" id="fcreacion" class="obligatorio" type="text" name="fechaCreacion" disabled></td>
+                    <td><input value="<?php echo $fechaCreacionAEditar; ?>" placeholder="FECHA CREACION" id="fcreacion" class="obligatorio" type="text" name="fechaCreacion" disabled></td>
                 </tr>
                 <tr>
                     <td class="titulo">FECHA DE INICIO</td>
-                    <td><input placeholder="FECHA INICIO" id="finicio" class="obligatorio" type="text" name="fechaInicio" disabled></td>
+                    <td><input value="<?php echo $fechaInicioAEditar; ?>" placeholder="FECHA INICIO" id="finicio" class="obligatorio" type="text" name="fechaInicio" disabled></td>
                 </tr>
                 <tr>
                     <td class="titulo">FECHA DE FIN</td>
-                    <td><input placeholder="FECHA FIN" id="ffin" class="obligatorio" type="text" name="fechaFin" disabled></td>
+                    <td><input value="<?php echo $fechaFinAEditar; ?>" placeholder="FECHA FIN" id="ffin" class="obligatorio" type="text" name="fechaFin" disabled></td>
                 </tr>
                 <tr>
                     <td class="titulo">ESTADO</td>
-                    <td><input placeholder="ESTADO" id="estado" class="obligatorio" type="text" name="estado" disabled></td>
+                    <td><input value="<?php echo $estadoAEditar; ?>" placeholder="ESTADO" id="estado" class="obligatorio" type="text" name="estado" disabled></td>
                 </tr>
                 <tr>
                     <td class="titulo">COSTE</td>
-                    <td><input placeholder="COSTE" id="coste" class="obligatorio" type="text" name="coste"></td>
+                    <td><input value="<?php echo $costeAEditar; ?>" placeholder="COSTE" id="coste" class="obligatorio" type="text" name="coste"></td>
                 </tr>
                 <tr>
                     <td class="titulo">FECHA DE BAJA</td>
-                    <td><input placeholder="FECHA BAJA" id="fbaja" class="obligatorio" type="text" name="fechaBaja" disabled></td>
+                    <td><input value="<?php echo '--Sin definir--'; ?>" placeholder="FECHA BAJA" id="fbaja" class="obligatorio" type="text" name="fechaBaja" disabled></td>
                 </tr>
             </table>
             <button type="submit" name="cancelar" class="botones">CANCELAR</button>
-            <button type="submit" name="aceptar" class="botones" disabled>ACEPTAR</button>
+            <button type="submit" name="aceptar" class="botones">ACEPTAR</button>
         </form>
     </div>

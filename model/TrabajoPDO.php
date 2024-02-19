@@ -8,7 +8,7 @@
 
 class TrabajoPDO {
 
-    public static function buscaTrabajoPorCod($codTrabajo) {
+    public static function buscarTrabajoPorCod($codTrabajo) {
 
         //Consulta SQL para validar si la descripcion del trabajo existe
         $sql = <<<SQL
@@ -25,19 +25,20 @@ class TrabajoPDO {
         if ($oTrabajo) { 
             // Se crea un objeto Trabajo en base al modelo
             return new Trabajo(
-                    $oTrabajo->T06_CodAnimal,
-                    $oTrabajo->T06_DescAnimal,
-                    $oTrabajo->T06_FechaNacimiento,
-                    $oTrabajo->T06_Sexo,
-                    $oTrabajo->T06_Raza,
-                    $oTrabajo->T06_Precio,
-                    $oTrabajo->T06_FechaBaja);
+                    $oTrabajo->T11_CodTrabajo,
+                    $oTrabajo->T11_DescTrabajo,
+                    $oTrabajo->T11_FechaCreacion,
+                    $oTrabajo->T11_FechaInicio,
+                    $oTrabajo->T11_FechaFin,
+                    $oTrabajo->T11_Estado,
+                    $oTrabajo->T11_Coste,
+                    $oTrabajo->T11_FechaBaja);
         } else {
             return null; 
         }
     }
 
-    public static function buscaTrabajosPorDesc($descTrabajo = null) {
+    public static function buscarTrabajosPorDesc($descTrabajo = null) {
 
         //Consulta SQL para validar si la descripcion del trabajo existe
         $sql = <<<SQL
@@ -79,15 +80,21 @@ class TrabajoPDO {
         
     }
 
-    public static function modificaTrabajo() {
+    public static function modificarTrabajo($codTrabajo, $descTrabajo, $coste) {
+        // Consulta de busqueda según el valor del parametro introducido
+        $consulta = <<<CONSULTA
+            UPDATE T11_Trabajo SET T11_DescTrabajo = '{$descTrabajo}', T11_Coste = {$coste} WHERE T11_CodTrabajo = '{$codTrabajo}';
+        CONSULTA;
+
+        // Devolvemos la ejecucion de la consulta
+        return DBPDO::ejecutaConsulta($consulta); 
+    }
+
+    public static function rehabilitarTrabajo() {
         
     }
 
-    public static function rehabilitaTrabajo() {
-        
-    }
-
-    public static function validaCodNoExiste() {
+    public static function validarCodNoExiste() {
         
     }
 }
