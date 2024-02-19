@@ -5,7 +5,7 @@
  * @since 07/02/2024
  */
 ?>
-<h2>TRABAJOS</h2>
+<h2>MANTENIMIENTO TRABAJOS</h2>
 </header>
 <main class="mtoTrabajos">
     <div class="container">
@@ -30,14 +30,13 @@
                         <th>ESTADO</th>
                         <th>COSTE</th>
                         <th>FECHA DE BAJA</th>
-                        <th colspan='4'><-T-></th>
+                        <th colspan='4'></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     foreach ($aTrabajosBuscadosVista as $aTrabajos) {//Recorro el objeto del resultado que contiene un array
                         echo ("<tr>");
-
                         echo ("<td>" . $aTrabajos['codTrabajo'] . "</td>");
                         echo ("<td>" . $aTrabajos['descTrabajo'] . "</td>");
                         echo ("<td>" . $aTrabajos['fechaCreacion'] . "</td>");
@@ -46,8 +45,12 @@
                         echo ("<td>" . $aTrabajos['estado'] . "</td>");
                         echo ("<td>" . $aTrabajos['coste'] . "€</td>");
                         echo ("<td>" . $aTrabajos['fechaBaja'] . "</td>");
-
                         echo ("<td>");
+                            echo ("<form method='post'>");
+                            echo ("<button name='modificarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonEditar' type='submit'><img src='webroot/image/editar.png' id='fotoEditar' alt='EDIT'></button>");
+                            echo ("</form>");
+                        echo ("</td>");
+                        echo ("</tr>");
 //                    var_dump($aTrabajosBuscadosVista);
                     }
                     ?>

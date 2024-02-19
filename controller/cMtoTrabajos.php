@@ -17,9 +17,22 @@ if (empty($_SESSION['user204DWESLoginLogout'])) {
 
 if (isset($_REQUEST['volver'])) {
     // Se guarda el mto departamentos como la pagina anterior
-    $_SESSION['paginaAnterior'] = 'consultarDepartamento';
+    $_SESSION['paginaAnterior'] = 'consultarTrabajo';
     // Redirige a la página de inicio privado
     $_SESSION['paginaActiva'] = 'inicioPrivado';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
+// Se comprueba si el boton de modificicar ha sido pulsado
+if (isset($_REQUEST['modificarTrabajo'])) {
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['codTrabajoActual'] = $_REQUEST['modificarTrabajo'];
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'consultarTrabajo';
+    // Redirige a la página de inicio privado
+    $_SESSION['paginaActiva'] = 'editarTrabajo';
     // Se carga el index
     header('Location: index.php');
     exit();

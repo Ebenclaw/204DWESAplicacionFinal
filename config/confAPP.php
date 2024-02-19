@@ -33,7 +33,8 @@ $controller = [
     'error' => 'controller/cError.php',
     'rest' => 'controller/cRest.php',
     'consultarDepartamento' => 'controller/cMtoDepartamentos.php',
-    'consultarTrabajo' => 'controller/cMtoTrabajos.php'
+    'consultarTrabajo' => 'controller/cMtoTrabajos.php',
+    'editarTrabajo' => 'controller/cConsultarModificarTrabajo.php'
 ];
 
 // El array $view almacena los ficheros de la vista
@@ -52,5 +53,6 @@ $view = [
     'error' => 'view/vError.php',
     'rest' => 'view/vREST.php',
     'consultarDepartamento' => 'view/vMtoDepartamentos.php',
-    'consultarTrabajo' => 'view/vMtoTrabajos.php'
+    'consultarTrabajo' => 'view/vMtoTrabajos.php',
+    'editarTrabajo' => 'view/vConsultarModificarTrabajo.php'
 ];
