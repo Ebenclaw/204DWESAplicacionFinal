@@ -445,6 +445,11 @@ slider {
     font-size: 1rem;
     background-color: white;
 }
+.mtoTrabajos .botonVolver{
+    position: fixed;
+    top: 80px;
+    right: 175px;
+}
 .mtoTrabajos button:hover{
     color: #ccc;
 }
@@ -457,6 +462,29 @@ slider {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin-bottom: 40px;
+}
+.mtoTrabajos .tablaTrabajos{
+    width: 90%;
+    border-collapse: collapse;
+}
+.mtoTrabajos .tablaTrabajos td, .mtoTrabajos .tablaTrabajos th{
+    padding-left: 5px;
+}
+.mtoTrabajos .tablaTrabajos thead{
+    text-align: left;
+    height: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.mtoTrabajos .tablaTrabajos tbody tr:first-of-type{
+    border-top: none;
+}
+.mtoTrabajos .tablaTrabajos tbody tr{
+    height: 40px;
+    font-size: 1rem;
+    border-bottom: 1px solid #ccc;
 }
 /*---TECNOLOGIAS---*/
 .tecnologias{

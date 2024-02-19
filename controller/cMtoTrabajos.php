@@ -25,25 +25,35 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
-// Se instancia el array que usara la vista para mostrar la informacion
-$aTrabajosBuscadosVista = [];
-
+// Se comprueba que se ha pulsado el boton de busqueda
 if (isset($_REQUEST['buscar'])) {
-    $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc($_REQUEST['busquedaSimple']);
+    // Se vacian los arrays para no guardar la busqueda anterior
+    $aTrabajosBuscadosVista = [];
+    $aTrabajosBuscados = [];
 
-    foreach ($aTrabajosBuscados as $oTrabajo) {//Recorro el objeto del resultado que contiene un array
-        $aTrabajosBuscadosVista[] = [
-            'codTrabajo' => $oTrabajo->getCodTrabajo(),
-            'descTrabajo' => $oTrabajo->getDescTrabajo(),
-            'fechaCreacion' => $oTrabajo->getFechaCreacion(),
-            'fechaInicio' => $oTrabajo->getFechaInicio(),
-            'fechaFin' => $oTrabajo->getFechaFin(),
-            'estado' => $oTrabajo->getEstado(),
-            'coste' => $oTrabajo->getCoste(),
-            'fechaBaja' => !is_null($oTrabajo->getFechaBaja()) ? $oTrabajo->getFechaBaja() : ''
-        ];
-    }
+    // Se llama a la busqueda simple del modelo con el campo introducido en el input de busqueda
+    $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc($_REQUEST['busquedaSimple']);
+    
+// Si no se ha pulsado el boton, se guardan TODOS los trabajos
+} else {
+    // Se llama a la busqueda simple para listar TODOS los Trabajos
+    $aTrabajosBuscados = TrabajoPDO::buscaTrabajosPorDesc();
 }
+
+// Se carga el array en un objeto para guardar los datos en el array de la vista
+foreach ($aTrabajosBuscados as $oTrabajo) {
+    $aTrabajosBuscadosVista[] = [
+        'codTrabajo' => $oTrabajo->getCodTrabajo(),
+        'descTrabajo' => $oTrabajo->getDescTrabajo(),
+        'fechaCreacion' => $oTrabajo->getFechaCreacion(),
+        'fechaInicio' => $oTrabajo->getFechaInicio(),
+        'fechaFin' => $oTrabajo->getFechaFin(),
+        'estado' => $oTrabajo->getEstado(),
+        'coste' => $oTrabajo->getCoste(),
+        'fechaBaja' => !is_null($oTrabajo->getFechaBaja()) ? $oTrabajo->getFechaBaja() : ''
+    ];
+}
+
 
 include $view['layout'];
 ?>

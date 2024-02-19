@@ -12,7 +12,7 @@ class TrabajoPDO {
         
     }
 
-    public static function buscaTrabajosPorDesc($descTrabajo = '') {
+    public static function buscaTrabajosPorDesc($descTrabajo = null) {
 
         //Consulta SQL para validar si la descripcion del trabajo existe
         $sql = <<<SQL
