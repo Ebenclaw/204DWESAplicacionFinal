@@ -38,6 +38,32 @@ if (isset($_REQUEST['modificarTrabajo'])) {
     exit();
 }
 
+// Se comprueba si el boton de mostrar ha sido pulsado
+if (isset($_REQUEST['mostrarTrabajo'])) {
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['codTrabajoActual'] = $_REQUEST['mostrarTrabajo'];
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'consultarTrabajo';
+    // Redirige a la página de inicio privado
+    $_SESSION['paginaActiva'] = 'detalleTrabajo';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
+// Se comprueba si el boton de mostrar ha sido pulsado
+if (isset($_REQUEST['eleminarTrabajo'])) {
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['codTrabajoActual'] = $_REQUEST['eleminarTrabajo'];
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'consultarTrabajo';
+    // Redirige a la página de inicio privado
+    $_SESSION['paginaActiva'] = 'eliminarTrabajo';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
 // Se comprueba que se ha pulsado el boton de busqueda
 if (isset($_REQUEST['buscar'])) {
     // Se vacian los arrays para no guardar la busqueda anterior

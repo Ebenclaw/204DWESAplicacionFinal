@@ -72,8 +72,15 @@ class TrabajoPDO {
         
     }
 
-    public static function bajaFisicaTrabajo() {
+    public static function bajaFisicaTrabajo($codTrabajo) {
         
+        // Consulta SQL de borrado en la base de datos de un trabajo
+        $sql = <<<SQL
+            DELETE FROM T11_Trabajo where T11_CodTrabajo = '$codTrabajo';
+        SQL;
+
+        // Se devulve el ejecutar la consulta de delete
+        return DBPDO::ejecutaConsulta($sql); 
     }
 
     public static function bajaLogicaTrabajo() {
@@ -83,7 +90,7 @@ class TrabajoPDO {
     public static function modificarTrabajo($codTrabajo, $descTrabajo, $coste) {
         // Consulta de busqueda según el valor del parametro introducido
         $consulta = <<<CONSULTA
-            UPDATE T11_Trabajo SET T11_DescTrabajo = '{$descTrabajo}', T11_Coste = {$coste} WHERE T11_CodTrabajo = '{$codTrabajo}';
+            UPDATE T11_Trabajo SET T11_DescTrabajo = '$descTrabajo', T11_Coste = $coste WHERE T11_CodTrabajo = '$codTrabajo';
         CONSULTA;
 
         // Devolvemos la ejecucion de la consulta

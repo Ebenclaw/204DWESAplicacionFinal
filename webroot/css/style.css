@@ -450,15 +450,6 @@ slider {
     top: 80px;
     right: 175px;
 }
-.mtoTrabajos #botonEditar{
-    background: none;
-    color: inherit;
-    border: none;
-    cursor: pointer;
-}
-.mtoTrabajos #fotoEditar{
-    width: 25px;
-}
 .mtoTrabajos button:hover{
     color: #ccc;
 }
@@ -494,6 +485,15 @@ slider {
     height: 40px;
     font-size: 1rem;
     border-bottom: 1px solid #ccc;
+}
+.mtoTrabajos .tablaTrabajos button{
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+.mtoTrabajos .tablaTrabajos img{
+    width: 25px;
 }
 /*---MODIFICAR TRABAJOS---*/
 .modTrabajos{
@@ -531,6 +531,13 @@ slider {
 }
 .modTrabajos button:hover{
     color: #ccc;
+}
+/*---BORRAR TRABAJO---*/
+.eliminarTrabajo input[disabled]{
+    background-color: #e49494;
+}
+.modTrabajos .botonBorrar:hover{
+    color: red;
 }
 /*---TECNOLOGIAS---*/
 .tecnologias{
