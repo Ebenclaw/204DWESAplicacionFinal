@@ -4,15 +4,17 @@
  * @version 1.0
  * @since 14/02/2024
  */
-
 /**
  * 
  * Clase Trabajo
  * 
- * Clase Trabajo que contiene la construcion de un objeto relativo a un trabajo
+ * This is a summary: Clase Trabajo que contiene el constructor, atributos y metodos (getter y setter) de un Usuario.
+ * This is a description: Clase Usuario construye un objeto "trabajo" para el mantenimiento del CRUD de esa table en la base de datos. Se usara para almacenar los objetos que devuelvan las consultas sql y operar con ellas en la sesion
  * 
  * @source Trabajo.php
  * @copyright 2022-2024 DAW2
+ * @author Rebeca Sánchez Pérez
+ * @since 14/02/2024
  */
 class Trabajo {
     
@@ -30,7 +32,16 @@ class Trabajo {
     private $fechaBaja;
 
     /*
-     * Constructor de Trabajo
+     * @constructor Constructor de Trabajo
+     * 
+     * @param int    $codTrabajo
+     * @param String $descTrabajo
+     * @param date   $fechaCreacion
+     * @param date   $fechaInicio
+     * @param date   $fechaFin
+     * @param String $estado
+     * @param float  $coste
+     * @param date   $fechaBaja (por defecto se inicializa a null)
      */
 
     public function __construct($codTrabajo, $descTrabajo, $fechaCreacion, $fechaInicio, $fechaFin, $estado, $coste, $fechaBaja = null) {

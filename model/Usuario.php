@@ -10,10 +10,14 @@
  * 
  * Clase Usuario
  * 
- * Clase Usuario que contiene las funciones necesarias para validar los campos de un formulario.
+ * This is a summary: Clase Usuario que contiene el constructor, atributos y metodos (getter y setter) que tiene un Usuario
+ * This is a description: Clase Usuario construye un objeto "usuario" para identificar al cliente. Se usara para almacenar los objetos que devuelvan las consultas sql y operar con ellas en la sesion
  * 
  * @source Usuario.php
  * @copyright 2022-2024 DAW2
+ * @author Rebeca Sánchez Pérez
+ * @since 22/01/2023
+ * @since 22/01/2023
  */
 class Usuario {
     /*
@@ -29,7 +33,15 @@ class Usuario {
     private $perfil;
 
     /*
-     * Constructor de Usuario
+     * @constructor Constructor de Usuario
+     * 
+     * @param int    $codUsuario
+     * @param String $password
+     * @param String $descUsuario
+     * @param int    $numAcceso
+     * @param date   $fechaHoraUltimaConexion
+     * @param date   $fechaHoraUltimaConexionAnterior
+     * @param String    $perfil
      */
 
     public function __construct($codUsuario, $password, $descUsuario, $numAcceso, $fechaHoraUltimaConexion, $fechaHoraUltimaConexionAnterior, $perfil) {
