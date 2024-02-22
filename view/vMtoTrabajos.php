@@ -46,19 +46,19 @@
                         echo ("<td>" . $aTrabajos['coste'] . "€</td>");
                         echo ("<td>" . $aTrabajos['fechaBaja'] . "</td>");
                         echo ("<td>");
-                            echo ("<form method='post'>");
-                            echo ("<button name='mostrarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonMostrar' type='submit'><img src='webroot/image/ojo.png' id='fotoMostrar' alt='INFO'></button>");
-                            echo ("</form>");
+                        echo ("<form method='post'>");
+                        echo ("<button name='mostrarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonMostrar' type='submit'><img src='webroot/image/ojo.png' id='fotoMostrar' alt='INFO'></button>");
+                        echo ("</form>");
                         echo ("</td>");
                         echo ("<td>");
-                            echo ("<form method='post'>");
-                            echo ("<button name='modificarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonEditar' type='submit'><img src='webroot/image/editar.png' id='fotoEditar' alt='EDIT'></button>");
-                            echo ("</form>");
+                        echo ("<form method='post'>");
+                        echo ("<button name='modificarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonEditar' type='submit'><img src='webroot/image/editar.png' id='fotoEditar' alt='EDIT'></button>");
+                        echo ("</form>");
                         echo ("</td>");
                         echo ("<td>");
-                            echo ("<form method='post'>");
-                            echo ("<button name='eleminarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonEliminar' type='submit'><img src='webroot/image/borrar.png' id='fotoEliminar' alt='DELETE'></button>");
-                            echo ("</form>");
+                        echo ("<form method='post'>");
+                        echo ("<button name='eleminarTrabajo' value='{$aTrabajos['codTrabajo']}' id='botonEliminar' type='submit'><img src='webroot/image/borrar.png' id='fotoEliminar' alt='DELETE'></button>");
+                        echo ("</form>");
                         echo ("</td>");
                         echo ("</tr>");
 //                    var_dump($aTrabajosBuscadosVista);
@@ -66,5 +66,9 @@
                     ?>
                 </tbody>
             </table>
+
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formMtoTrabajoOpciones" method="post">
+                <button type="submit" name="crear" class="botones">+ AÑADIR TRABAJO</button>
+            </form>
         </div>
     </div>

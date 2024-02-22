@@ -36,7 +36,8 @@ $controller = [
     'consultarTrabajo' => 'controller/cMtoTrabajos.php',
     'editarTrabajo' => 'controller/cConsultarModificarTrabajo.php',
     'detalleTrabajo' => 'controller/cDetalleTrabajo.php',
-    'eliminarTrabajo' => 'controller/cEliminarTrabajo.php'
+    'eliminarTrabajo' => 'controller/cEliminarTrabajo.php',
+    'añadirTrabajo' => 'controller/cAltaTrabajo.php'
 ];
 
 // El array $view almacena los ficheros de la vista
@@ -58,5 +59,6 @@ $view = [
     'consultarTrabajo' => 'view/vMtoTrabajos.php',
     'editarTrabajo' => 'view/vConsultarModificarTrabajo.php',
     'detalleTrabajo' => 'view/vDetalleTrabajo.php',
-    'eliminarTrabajo' => 'view/vEliminarTrabajo.php'
+    'eliminarTrabajo' => 'view/vEliminarTrabajo.php',
+    'añadirTrabajo' => 'view/vAltaTrabajo.php'
 ];

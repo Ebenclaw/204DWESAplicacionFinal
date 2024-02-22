@@ -25,6 +25,16 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
+if (isset($_REQUEST['crear'])) {
+    // Se guarda el mto departamentos como la pagina anterior
+    $_SESSION['paginaAnterior'] = 'consultarTrabajo';
+    // Redirige a la página de inicio privado
+    $_SESSION['paginaActiva'] = 'añadirTrabajo';
+    // Se carga el index
+    header('Location: index.php');
+    exit();
+}
+
 // Se comprueba si el boton de modificicar ha sido pulsado
 if (isset($_REQUEST['modificarTrabajo'])) {
     // Se guarda el mto departamentos como la pagina anterior
