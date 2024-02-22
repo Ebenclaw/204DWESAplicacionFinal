@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>Diagrama de clases</td>
-                <td><a href="doc/infoAPP/230129DiagramaDeClases.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
+                <td><a href="doc/infoAPP/UML.pdf" target="_blank"><img src="webroot/image/pdf.png"></a></td>
             </tr>
             <tr>
                 <td>Arbol de navegación</td>
