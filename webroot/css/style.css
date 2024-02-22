@@ -559,8 +559,7 @@ slider {
     width: 90%;
 }
 .addTrabajos #formAddTrabajo table .radios{
-    height: 40px;
-    margin: 15px 0;
+    height: 70px;
 }
 .addTrabajos #formAddTrabajo table .titulo{
     width: 420px;
@@ -583,6 +582,105 @@ slider {
 }
 .addTrabajos button:hover{
     color: #ccc;
+}
+/*---MI CUENTA---*/
+.miCuenta{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin-top: 183px;
+}
+.miCuenta .botones{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 350px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.miCuenta #formModTrabajo table{
+    width: 90%;
+}
+.miCuenta #formModTrabajo table .titulo{
+    width: 420px;
+}    
+.miCuenta input{
+    padding-left: 5px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1rem;
+    border-bottom: 1px solid grey;
+    margin-bottom: 30px;
+}
+.miCuenta input[disabled]{
+    background-color: #ddd;
+}
+.miCuenta button:hover{
+    color: #ccc;
+}
+/*---CAMBIAR CONTRASEÑA---*/
+.cambiarPass{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin-top: 183px;
+}
+.cambiarPass .botones{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 400px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.cambiarPass #formModTrabajo table{
+    width: 90%;
+}
+.cambiarPass #formModTrabajo table .titulo{
+    width: 420px;
+}    
+.cambiarPass input{
+    padding-left: 5px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1rem;
+    border-bottom: 1px solid grey;
+    margin-bottom: 30px;
+}
+.cambiarPass input[disabled]{
+    background-color: #ddd;
+}
+.cambiarPass button:hover{
+    color: #ccc;
+}
+/*---BORRAR CUENTA---*/
+.borrarCuenta{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin-top: 183px;
+}
+.borrarCuenta h3{
+    font-weight: normal;
+}
+.borrarCuenta .botones{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 400px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+}
+.borrarCuenta button:hover{
+    color: #ccc;
+}
+.borrarCuenta .botonBorrar:hover{
+    color: red;
 }
 /*---TECNOLOGIAS---*/
 .tecnologias{

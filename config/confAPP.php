@@ -37,7 +37,10 @@ $controller = [
     'editarTrabajo' => 'controller/cConsultarModificarTrabajo.php',
     'detalleTrabajo' => 'controller/cDetalleTrabajo.php',
     'eliminarTrabajo' => 'controller/cEliminarTrabajo.php',
-    'añadirTrabajo' => 'controller/cAltaTrabajo.php'
+    'añadirTrabajo' => 'controller/cAltaTrabajo.php',
+    'miCuenta' => 'controller/cMiCuenta.php',
+    'cambiarContraseña' => 'controller/cCambiarPassword.php',
+    'borrarCuenta' => 'controller/cBorrarCuenta.php'
 ];
 
 // El array $view almacena los ficheros de la vista
@@ -60,5 +63,8 @@ $view = [
     'editarTrabajo' => 'view/vConsultarModificarTrabajo.php',
     'detalleTrabajo' => 'view/vDetalleTrabajo.php',
     'eliminarTrabajo' => 'view/vEliminarTrabajo.php',
-    'añadirTrabajo' => 'view/vAltaTrabajo.php'
+    'añadirTrabajo' => 'view/vAltaTrabajo.php',
+    'miCuenta' => 'view/vMiCuenta.php',
+    'cambiarContraseña' => 'view/vCambiarPassword.php',
+    'borrarCuenta' => 'view/vBorrarCuenta.php'
 ];

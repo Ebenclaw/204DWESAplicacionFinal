@@ -63,7 +63,7 @@ if (isset($_REQUEST['detalle'])) {
 // Se comprueba que se pulsa el boton Editar Perfil
 if (isset($_REQUEST['editarPerfil'])) {
     // Redirige a la página de Mi Cuenta
-    $_SESSION['paginaActiva'] = 'wip';
+    $_SESSION['paginaActiva'] = 'miCuenta';
     // Registra inicio privado como la pagina anterior
     $_SESSION['paginaAnterior'] = 'inicioPrivado';
     // Se carga el index

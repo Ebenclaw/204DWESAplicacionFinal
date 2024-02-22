@@ -1,7 +1,7 @@
 <?php
 
 /*
- * @author Rebeca Sánchez Pérez
+ * @author Rebeca Sánchez Pérez, Carlos García Cachón
  * @version 1.2
  * @since 14/02/2023
  */
@@ -68,8 +68,17 @@ class TrabajoPDO {
         return $aTrabajos;
     }
 
-    public static function altaTrabajo() {
+    public static function altaTrabajo($codTrabajo, $descTrabajo, $fechaCreacion, $fechaInicio, $fechaFin, $estado, $coste) {
+        // Consulta SQL de insercion en la base de datos de un trabajo
+        $sql = <<<SQL
+            INSERT INTO T11_Trabajo VALUES ('$codTrabajo','$descTrabajo', '$fechaCreacion', '$fechaInicio', '$fechaFin', '$estado', $coste, NULL);
+        SQL;
         
+        if (DBPDO::ejecutaConsulta($sql)) { // Ejecuto la consulta
+            return new Trabajo($codTrabajo, $descTrabajo, $fechaCreacion, $fechaInicio, $fechaFin, $estado, $coste);
+        } else {
+            return false; // Si la consulta falla devuelvo 'false'
+        }
     }
 
     public static function bajaFisicaTrabajo($codTrabajo) {

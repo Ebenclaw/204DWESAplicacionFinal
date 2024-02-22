@@ -28,7 +28,7 @@ class UsuarioPDO implements UsuarioDB {
                         $oResultado->T01_DescUsuario,
                         $oResultado->T01_NumConexiones,
                         $oResultado->T01_FechaHoraUltimaConexion,
-                        $oResultado->T01_FechaHoraUltimaConexionAnterior,
+                        $oResultado->T01_FechaHoraUltimaConexionAnterior = null,
                         $oResultado->T01_Perfil
                 );
             }
@@ -75,5 +75,49 @@ class UsuarioPDO implements UsuarioDB {
         } else {
             return false; // Si la consulta falla devuelvo 'false'
         }
+    }
+    
+    public static function modificarUsuario($oUsuario, $descUsuario) {
+        //CONSULTA SQL - UPDATE
+        $consultaModificarUsuario = <<<CONSULTA
+            UPDATE T01_Usuario SET T01_DescUsuario="{$descUsuario}" WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+        CONSULTA;
+
+        $oUsuario->setDescUsuario($descUsuario);
+
+        if (DBPDO::ejecutaConsulta($consultaModificarUsuario)) { // Ejecuto la consulta
+            return $oUsuario; // Devuelvo un objeto Usuario
+        } else {
+            return false;
+        }
+    }
+    
+    public static function cambiarPassword($oUsuario, $password){
+        //Consulta SQL para modificar la password de un usuario
+        $consultaModificarPassword = <<<CONSULTA
+            UPDATE T01_Usuario SET T01_Password=SHA2("{$oUsuario->getCodUsuario()}{$password}", 256) WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+        CONSULTA;
+        
+        /*
+         * La siguente línea de código hago un hash con la nueva contraseña, para que cuando edite la 
+         * contraseña del objeto Usuario, no me la guarde en el objeto sin encriptar.
+         */
+        $hashPassword = hash("sha256", ($oUsuario->getCodUsuario() . $password)); 
+        $oUsuario->setPassword($hashPassword);
+        
+        if(DBPDO::ejecutaConsulta($consultaModificarPassword)){
+            return $oUsuario;
+        }else{
+            return false;
+        }
+    }
+    
+    public static function borrarUsuario($codUsuario) {
+        //CONSULTA SQL - DELETE
+        $consultaEliminarUsuario = <<<CONSULTA
+            DELETE FROM T01_Usuario WHERE T01_CodUsuario = '{$codUsuario}';
+        CONSULTA;
+            
+        return DBPDO::ejecutaConsulta($consultaEliminarUsuario);
     }
 }
