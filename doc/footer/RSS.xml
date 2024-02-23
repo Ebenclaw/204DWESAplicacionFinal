@@ -19,5 +19,10 @@
             <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version1.2</link>
             <description>Paso a explotacion de la app con el uso de 2 API rest ¿Que incorpora esta versión?</description>
         </item>
+        <item>
+            <title>Version final EXAMEN 23/02/2024</title>
+            <link>https://github.com/Ebenclaw/204DWESAplicacionFinal/releases/tag/Version2.0</link>
+            <description>Version final de la app final, examen DWES</description>
+        </item>
     </channel>
 </rss>
